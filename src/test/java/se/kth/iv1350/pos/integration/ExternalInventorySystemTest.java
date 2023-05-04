@@ -29,7 +29,7 @@ public class ExternalInventorySystemTest {
 
         assertEquals(foundItem.getId(), 339800);
         assertEquals(foundItem.getName(), "Hagendas");
-        assertEquals(foundItem.getItemDescription(), "straberry");
+        assertEquals(foundItem.getItemDescription(), "strawberry");
         assertEquals(foundItem.getVat(), 0.2, 1e-9);
         assertEquals(foundItem.getPrice(), 70, 1e-9);
     }

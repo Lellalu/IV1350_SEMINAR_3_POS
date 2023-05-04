@@ -45,15 +45,15 @@ public class SaleInformationTest {
 
     @Test
     public void testAddItemToNullSoldItems(){
-        ItemDTO glas = new ItemDTO(339800, "Hagendas", "straberry", 0.4, 70);
+        ItemDTO glass = new ItemDTO(339800, "Hagendas", "strawberry", 0.2, 70);
         int increasedQuantity = 3;
 
         HashMap<ItemDTO, Integer> beforeSoldItems = saleInformation.getSoldItems();
-        saleInformation.addItem(glas.getId(), increasedQuantity, externalInventorySystem);
+        saleInformation.addItem(glass.getId(), increasedQuantity, externalInventorySystem);
         HashMap<ItemDTO, Integer> afterSoldItems = saleInformation.getSoldItems();
 
-        int beforeGlassSoldQuantity = beforeSoldItems.getOrDefault(glas, 0);
-        int afterGlasSoldQuantity = afterSoldItems.get(glas);
+        int beforeGlassSoldQuantity = beforeSoldItems.getOrDefault(glass, 0);
+        int afterGlasSoldQuantity = afterSoldItems.get(glass);
         assertEquals(beforeGlassSoldQuantity+increasedQuantity, afterGlasSoldQuantity);
     }
 

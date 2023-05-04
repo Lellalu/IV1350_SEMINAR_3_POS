@@ -64,7 +64,7 @@ public class ControllerTest {
 
     @Test
     public void testEnterItemExist(){
-        ItemDTO chips = new ItemDTO(520001, "OLW", "cheddar", 0.2, 30);
+        ItemDTO chips = new ItemDTO(520001, "OLW chips", "250g", 0.2, 30);
         int quantity = 3;
         int beforeSoldQuantity;
         int afterSoldQuantity;
@@ -104,7 +104,7 @@ public class ControllerTest {
 
     @Test
     public void testEndSale(){
-        ItemDTO chips = new ItemDTO(520001, "OLW", "cheddar", 0.2, 30);
+        ItemDTO chips = new ItemDTO(520001, "OLW chips", "250g", 0.2, 30);
         int quantity = 3;
 
         controller.startSale();
