@@ -54,7 +54,7 @@ public class SaleInformationTest {
 
         int beforeGlassSoldQuantity = beforeSoldItems.getOrDefault(glass, 0);
         int afterGlasSoldQuantity = afterSoldItems.get(glass);
-        assertEquals("addItem() did not add the right item and quantity to the sale information", beforeGlassSoldQuantity+increasedQuantity, afterGlasSoldQuantity);
+        assertEquals("addItem() did not return the right item quantity in the sale information", beforeGlassSoldQuantity+increasedQuantity, afterGlasSoldQuantity);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class SaleInformationTest {
         }
 
         double actualPriceAfterDiscount = saleInformation.includeDiscount(costumer.getId(), discountRegistry, customerRegistry);
-        assertEquals("IncludeDiscount() calculate wrong price after discount",expectedPriceAfterDiscount, actualPriceAfterDiscount, 1e-9);
+        assertEquals("IncludeDiscount() calculated wrong price after discount",expectedPriceAfterDiscount, actualPriceAfterDiscount, 1e-9);
     }   
 
     @Test
