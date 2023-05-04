@@ -7,7 +7,6 @@ import se.kth.iv1350.pos.integration.DiscountRegistry;
 import se.kth.iv1350.pos.integration.ExternalInventorySystem;
 import se.kth.iv1350.pos.integration.AccountingSystem;
 import se.kth.iv1350.pos.integration.CustomerRegistry;
-import se.kth.iv1350.pos.integration.DiscountDTO;
 import se.kth.iv1350.pos.integration.RegisterCreator;
 import se.kth.iv1350.pos.model.SaleInformation;
 import se.kth.iv1350.pos.integration.Printer;
@@ -94,9 +93,8 @@ public class Controller {
         Receipt receipt;
         double totalPrice = saleInformation.getTotalPrice();
         soldItems = saleInformation.getSoldItems();
-        DiscountDTO[] discounts = saleInformation.getDiscount();
         LocalDateTime dateTime = LocalDateTime.now();
-        receipt = new Receipt(paidAmount, totalPrice, soldItems, discounts, dateTime);
+        receipt = new Receipt(paidAmount, totalPrice, soldItems, dateTime);
         printer.printReceipt(receipt);
     }
 

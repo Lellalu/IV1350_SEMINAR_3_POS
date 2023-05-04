@@ -29,7 +29,7 @@ public class ReceiptTest {
         soldItems.put(glass, 5);
         soldItems.put(cola, 10);
 
-        receipt = new Receipt(DEFAULT_PAID_AMOUNT, DEFAULT_TOTAL_PRICE, soldItems, null, DEFAULT_DATE_TIME);
+        receipt = new Receipt(DEFAULT_PAID_AMOUNT, DEFAULT_TOTAL_PRICE, soldItems, DEFAULT_DATE_TIME);
         System.out.println(receipt);
     }
 

@@ -39,6 +39,9 @@ public class View {
         ItemDTO glass = new ItemDTO(339800, "Hagendas", "Strawberry", 0.2, 70);
         int glassId = glass.getId();
 
+        ItemDTO nonExist = new ItemDTO(-1, "Heaven", "nowhere", 1, 1000);
+        int nonExistId = nonExist.getId();
+
         int customerId = customer.getId();
         double paidAmount = 400;
 
@@ -57,6 +60,9 @@ public class View {
         System.out.println("The customer buys 1 more Hagendas.");
         controller.enterItem(glassId, 1);
 
+        System.out.println("The customer buys 1 invalid item.");
+        controller.enterItem(nonExistId, 1);
+        
         System.out.println("The customer asks for discounts.");
         controller.sendDiscountRequest(customerId);
 

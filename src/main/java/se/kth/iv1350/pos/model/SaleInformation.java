@@ -17,7 +17,6 @@ public class SaleInformation {
     private DiscountDTO[] discounts;
     private double totalPrice;
     private HashMap<ItemDTO, Integer> soldItems;
-    private double totalPriceIncludeVat;
 
 /**
 * Create and initialize the saleInformation.

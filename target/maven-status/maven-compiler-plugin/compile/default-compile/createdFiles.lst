@@ -1,0 +1,14 @@
+se/kth/iv1350/pos/integration/RegisterCreator.class
+se/kth/iv1350/pos/controller/Controller.class
+se/kth/iv1350/pos/view/View.class
+se/kth/iv1350/pos/integration/DiscountRegistry.class
+se/kth/iv1350/pos/model/Receipt.class
+se/kth/iv1350/pos/integration/DiscountDTO.class
+se/kth/iv1350/pos/integration/CustomerDTO.class
+se/kth/iv1350/pos/integration/AccountingSystem.class
+se/kth/iv1350/pos/integration/Printer.class
+se/kth/iv1350/pos/model/SaleInformation.class
+se/kth/iv1350/pos/integration/ItemDTO.class
+se/kth/iv1350/pos/startup/Main.class
+se/kth/iv1350/pos/integration/ExternalInventorySystem.class
+se/kth/iv1350/pos/integration/CustomerRegistry.class

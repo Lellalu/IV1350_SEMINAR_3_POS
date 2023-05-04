@@ -28,7 +28,7 @@ public class PrinterTest {
         ItemDTO foundItem2 = externalInventorySystem.findItem(520001);
         soldItems.put(foundItem1, 2);
         soldItems.put(foundItem2, 2);
-        receipt = new Receipt(paidAmount, totalPrice, soldItems, null, dateTime);
+        receipt = new Receipt(paidAmount, totalPrice, soldItems, dateTime);
         printer = new Printer();
     }
 

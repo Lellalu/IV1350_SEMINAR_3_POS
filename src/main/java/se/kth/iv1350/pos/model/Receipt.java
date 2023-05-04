@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 import se.kth.iv1350.pos.integration.DiscountDTO;
 import se.kth.iv1350.pos.integration.ItemDTO;
-import se.kth.iv1350.pos.model.SaleInformation;
 
 /**
 * This is the Receipt class, calling methods of doing calculation in receipt and getting information of the receipt.
@@ -16,7 +15,6 @@ public class Receipt {
     private double totalPrice;
     private HashMap<ItemDTO, Integer> soldItems;
     private LocalDateTime dateTime;
-    private DiscountDTO[] discounts;
 
 /**
 * Create the receipt.
@@ -24,14 +22,12 @@ public class Receipt {
 * @param totalPrice The double of totalPrice of soldItems should be entered.
 * @param dateTime The Local dateTime should be entered.
 * @param soldItems The HashMap<ItemDTO, Integer> of soldItems should be entered.
-* @param discounts The DiscountDTO[] of all eligible discounts should be entered.
 */
-    public Receipt(double paidAmount, double totalPrice, HashMap<ItemDTO, Integer> soldItems, DiscountDTO[] discounts, LocalDateTime dateTime){
+    public Receipt(double paidAmount, double totalPrice, HashMap<ItemDTO, Integer> soldItems, LocalDateTime dateTime){
         this.paidAmount = paidAmount;
         this.totalPrice = totalPrice;
         this.dateTime = LocalDateTime.now();
         this.soldItems = soldItems;
-        this.discounts = discounts;
     }
 
 /**
