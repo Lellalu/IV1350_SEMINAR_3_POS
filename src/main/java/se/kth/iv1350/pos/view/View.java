@@ -54,6 +54,9 @@ public class View {
         System.out.println("The customer buys 2 Hagendas.");
         controller.enterItem(glassId, 2);
 
+        System.out.println("The customer buys 1 more Hagendas.");
+        controller.enterItem(glassId, 1);
+
         System.out.println("The customer asks for discounts.");
         controller.sendDiscountRequest(customerId);
 
