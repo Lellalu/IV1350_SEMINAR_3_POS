@@ -73,6 +73,7 @@ public class SaleInformation {
     public void addItem(int identifier, int quantity, ExternalInventorySystem externalInventorySystem){
         ItemDTO toBeAddedItem = externalInventorySystem.findItem(identifier);
         if (toBeAddedItem == null) {
+            System.out.println("The item with identifier " + Integer.toString(identifier) + " is invald.");
             return;
         }
         int alreadySoldQuantity = soldItems.getOrDefault(toBeAddedItem, 0);
