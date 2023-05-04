@@ -59,7 +59,7 @@ public class ControllerTest {
         soldItems = saleInformation.getSoldItems();
         afterSoldQuantity = soldItems.getOrDefault(nonExistentItem, 0);
 
-        assertEquals("enterItem() did not return null.", beforeSoldQuantity, afterSoldQuantity);
+        assertEquals("enterItem() returned a wrong sale information when sold item is invalid.", beforeSoldQuantity, afterSoldQuantity);
     }
 
     @Test
@@ -83,7 +83,7 @@ public class ControllerTest {
         soldItems = saleInformation.getSoldItems();
         afterSoldQuantity = soldItems.getOrDefault(chips, 0);
 
-        assertEquals("enterItem() returned wrong soldItems[] in sale informaton for existed items.", 
+        assertEquals("enterItem() returned wrong quantity of the sold item in sale informaton for valid items.", 
                     beforeSoldQuantity+quantity, afterSoldQuantity);
     }
 

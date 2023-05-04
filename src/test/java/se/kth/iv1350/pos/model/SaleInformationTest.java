@@ -54,7 +54,7 @@ public class SaleInformationTest {
 
         int beforeGlassSoldQuantity = beforeSoldItems.getOrDefault(glass, 0);
         int afterGlasSoldQuantity = afterSoldItems.get(glass);
-        assertEquals(beforeGlassSoldQuantity+increasedQuantity, afterGlasSoldQuantity);
+        assertEquals("addItem() did not add the right item and quantity to the sale information", beforeGlassSoldQuantity+increasedQuantity, afterGlasSoldQuantity);
     }
 
     @Test
@@ -77,7 +77,7 @@ public class SaleInformationTest {
         saleInformation.addItem(420101, 1, externalInventorySystem);
         double expectedTotalPrice = 160;
         saleInformation.uppdateSaleInformation();
-        assertEquals(expectedTotalPrice, saleInformation.getTotalPrice(), 1e-9);
+        assertEquals("uppdateSaleInformation() returned wrong total price of sold items", expectedTotalPrice, saleInformation.getTotalPrice(), 1e-9);
     }
 
 

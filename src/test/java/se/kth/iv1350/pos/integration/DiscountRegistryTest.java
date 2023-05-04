@@ -31,7 +31,6 @@ public class DiscountRegistryTest {
         DiscountDTO[] expectedFoundDiscount = {discount_3, discount_1};
         assertNotNull(foundDiscount);
 
-        assertEquals(expectedFoundDiscount.length, foundDiscount.length);
-        assertArrayEquals(expectedFoundDiscount, foundDiscount);
+        assertArrayEquals("findDiscount() returns a wrong discountDTO array", expectedFoundDiscount, foundDiscount);
     }
 }

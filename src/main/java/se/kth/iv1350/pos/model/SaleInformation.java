@@ -67,7 +67,6 @@ public class SaleInformation {
 * If the item is valid(can be found in inventory), the itemDTO will be added in the soldItems.
 * If the item is already existed on soldItems list, the quantity of the sold item will be added
 * with the alreadySoldQuantity and the newEnteredQuantity.
-* @return soldItems The HashMap<ItemDTO, Integer> which contains all the entered items and their sold quantity.
 */
     public void addItem(int identifier, int quantity, ExternalInventorySystem externalInventorySystem){
         ItemDTO toBeAddedItem = externalInventorySystem.findItem(identifier);
